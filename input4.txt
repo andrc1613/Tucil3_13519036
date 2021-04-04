@@ -1,0 +1,21 @@
+10
+0 0 Pasar_Gede
+-6 2 Pura_Mangkunegaran
+-11 1 Batik_DanarHadi
+-3 -4 Keraton_Surakarta
+-4 -9 AlunAlun
+-7 9 Stasiun_SoloBalapan
+7 7 RSUD_Moewardi
+17 4 UNS
+-16 12 Taman_Balekambang
+-17 8 Stadion_Manahan
+0 1 0 1	0 0 0 1	0 0
+1 0 1 0	0 1 0 0	0 0
+0 1 0 1	0 0 0 0	0 0
+1 0 1 0	1 0 0 0	0 0
+0 0 0 1	0 0 0 0	0 0
+0 1 0 0	0 0 1 0	1 0
+1 0 0 0	0 1 0 1	0 0
+0 0 0 0	0 0 1 0	0 0
+0 0 0 0	0 1 0 0	0 1
+0 0 0 0	0 0 0 0	1 0

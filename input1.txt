@@ -1,0 +1,20 @@
+9
+0 0 ITB
+3 -2 RS_Borromeus
+0 -2 Masjid_Salman
+-5 -2 Ciwalk
+-3 1 KebunBinatang
+4 4 UNIKOM
+7 -1 MonumenPers
+0 6 BabakanSiliwangi
+-2 5 Sabuga
+0 1 1 0	1 0 0 0	0
+1 0 0 0	0 1 1 0	0
+1 0 0 0	0 0 0 0	0
+0 0 0 0	0 0 0 0	0
+1 0 0 0	0 0 0 0	1
+0 1 0 0	0 0 0 0	1
+0 1 0 0	0 0 0 0	0
+0 0 0 0	0 0 0 0	1
+0 0 0 0	1 1 0 1	0
+

@@ -1,0 +1,18 @@
+8
+0 0 AlunAlun
+4 1 Museum_AsiaAfrika
+-4 -2 TheKings_ShoppingCentre
+-11 2 SudirmanStreet
+8 5 Rasa_Bakery
+-5 7 Pasar_Baru
+3 8 Braga_CityWalk
+6 12 GerejaKatedral_StPetrus
+0 1 0 1	0 1 0 0
+1 0 0 0	1 0 1 0
+0 0 0 1	0 0 0 0
+1 0 1 0	0 1 0 0
+0 1 0 0	0 0 1 1
+1 0 0 1	0 0 1 0
+0 1 0 0	1 1 0 0
+0 0 0 0	1 0 0 0
+

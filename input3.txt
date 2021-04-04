@@ -1,0 +1,17 @@
+8
+3 6 MetroIndah_Mall
+-4 5 RS_Edelweiss
+-11 3 Carrefour
+-2 -4 BormaToserba
+6 -4 RSIA_HarapanBunda
+4 9 TheSuites
+10 11 GOR
+-7 1 Perumahan_KiaraAsri
+0 0 0 1	1 1 0 0
+0 0 0 0	0 1 0 1
+0 0 0 0	0 0 0 1
+1 0 0 0	0 0 0 1
+1 0 0 0	0 0 0 0
+1 1 0 0	0 0 1 0
+0 0 0 0	0 1 0 0
+0 1 1 1	0 0 0 0
