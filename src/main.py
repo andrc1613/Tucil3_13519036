@@ -65,15 +65,21 @@ def visualizeGraph(graph):
 
 # Main Function
 if __name__ == "__main__":
-    filename = "input1.txt"  # input("Enter file name: ")
-    txtMap = createGraphFromFile(filename)
-    txtMap.showGraph()
-    # visualizeGraph(txtMap)
-    # a = txtMap.getNodeByName("Sabuga")
-    # b = txtMap.getNodeByName("Ciwalk")
-    # path = txtMap.aStar(a,b)
-    # if path != None:
-    #     for e in path:
-    #         print(e.name,e.g)
-    # else:
-    #     print("none")
+    print("Input \"#\" untuk keluar.")
+    
+    # file input handler
+    filename = input("Enter file name: ")
+    while (filename != "#"):
+        try:
+            txtMap = createGraphFromFile(filename)
+            txtMap.visualizeGraph()
+            
+            # node input handler
+            start, end = input("Silakan masukkan kota asal dan tujuan: ").split()
+            txtMap.aStar(start,end)
+            txtMap.visualizePath()
+            filename = input("Enter file name: ")
+        
+        except Exception:
+            print("File tidak ditemukan")
+            filename = input("Enter file name: ")

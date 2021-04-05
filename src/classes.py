@@ -1,7 +1,10 @@
+import matplotlib.pyplot as plt
+
 class Graph:
     def __init__(self):
         self.nodes = []
         self.nodesCount = 0
+        self.aStarPath = []
 
     def addNode(self, nodes):
         self.nodes.append(nodes)
@@ -11,16 +14,80 @@ class Graph:
         for n in self.nodes:
             if n.name == name:
                 return n
+        return None
 
     def showGraph(self):
         for e in self.nodes:
             e.showNode()
         return
 
+    def visualizeGraph(self):
+        plt.axis([-10,10,-10,10])
+        listName = []
+        listX = []
+        listY = []
+        listEdges = []
+        for node in self.nodes:
+            listName.append(node.name)
+            listX.append(node.x)
+            listY.append(node.y)
+            for adjNodes in node.adjacentNodes:
+                listEdges.append((node.name,adjNodes))
+
+        for i in range(self.nodesCount):
+            plt.plot(listX[i],listY[i],"bo")
+            plt.text(listX[i],listY[i],listName[i])
+        
+        for i in range(len(listEdges)):
+            node1 = self.getNodeByName(listEdges[i][0])
+            node2 = self.getNodeByName(listEdges[i][1])
+            plt.plot([node1.x,node2.x],[node1.y,node2.y],color='b')
+        
+        plt.show()
+        return
+    
+    def visualizePath(self):
+        if self.aStarPath == None:
+            print("Tidak terdapat jalan yang menghubungkan kedua lokasi.")
+            return
+        plt.axis([-10,10,-10,10])
+        listName = []
+        listX = []
+        listY = []
+        listNameInPath = []
+        listEdges = []
+        for node in self.nodes:
+            listName.append(node.name)
+            listX.append(node.x)
+            listY.append(node.y)
+            if node in self.aStarPath:
+                listNameInPath.append(node.name)
+            for adjNodes in node.adjacentNodes:
+                listEdges.append((node.name,adjNodes))
+
+        for i in range(self.nodesCount):
+            plt.text(listX[i],listY[i],listName[i])
+            if listName[i] in listNameInPath:
+                plt.plot(listX[i],listY[i],"ro")
+                continue
+            plt.plot(listX[i],listY[i],"bo")
+
+        for i in range(len(listEdges)):
+            node1 = self.getNodeByName(listEdges[i][0])
+            node2 = self.getNodeByName(listEdges[i][1])
+            if node1.name in listNameInPath and node2.name in listNameInPath:
+                plt.plot([node1.x,node2.x],[node1.y,node2.y],color='r')
+                continue
+            plt.plot([node1.x,node2.x],[node1.y,node2.y],color='b')
+
+        plt.show()
+        return
+
     def euclideanDistance(self, node1, node2):
         return ((node1.x - node2.x)**2 + (node1.y - node2.y)**2)**(1/2)
 
     def aStar(self, start, end):
+        self.aStarPath = []
 
         # define get node with minimum f value function
         def getNodeByF(openNodes):
@@ -35,19 +102,19 @@ class Graph:
         closedNodes = []
 
         # algorithm
-        openNodes.append(start)
-
+        openNodes.append(self.getNodeByName(start))
+        endNode = self.getNodeByName(end)
         while any(openNodes):
             current = getNodeByF(openNodes)
 
             # case 1 : path found
-            if current == end:
-                path = []
+            if current == endNode:
                 while current.previous != None:
-                    path.append(current)
+                    self.aStarPath.append(current)
                     current = current.previous
-                path.append(current)
-                return path[::-1]
+                self.aStarPath.append(current)
+                self.aStarPath = self.aStarPath[::-1]
+                return
 
             # case 2 : path not yet found
             openNodes.remove(current)
@@ -58,7 +125,7 @@ class Graph:
                     continue
                 
                 tempG = self.euclideanDistance(current,node) + current.g
-                tempH = self.euclideanDistance(node,end)
+                tempH = self.euclideanDistance(node,endNode)
                 tempF = tempG + tempH
                 
                 if node in openNodes:
@@ -70,9 +137,10 @@ class Graph:
                 node.h = tempH
                 node.previous = current
                 openNodes.append(node)
-            
+        
         # case 3 : path not found
-        return None
+        self.aStarPath = None
+        return
 
 
 class Node:
