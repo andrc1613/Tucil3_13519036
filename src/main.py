@@ -75,7 +75,8 @@ if __name__ == "__main__":
             txtMap.visualizeGraph()
             
             # node input handler
-            start, end = input("Silakan masukkan kota asal dan tujuan: ").split()
+            print("Silakan masukkan kota asal dan tujuan (Format: <kota_asal><spasi><kota_tujuan>, contoh: ITB Sabuga) :")
+            start, end = input().split()
             txtMap.aStar(start,end)
             txtMap.visualizePath()
             filename = input("Enter file name: ")

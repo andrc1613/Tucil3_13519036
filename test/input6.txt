@@ -1,0 +1,19 @@
+8
+-8 0 Liverpool
+-5 0 Manchester
+0 3 Leeds
+3 5 York
+0 -3 Sheffield
+1 -6 Nottingham
+5 0 Scunthorpe
+8 0 Grimsby
+0 1 0 0	0 0 0 0
+1 0 1 0	1 0 0 0
+0 1 0 1	0 0 1 0
+0 0 1 0	0 0 0 0
+0 1 0 0	0 1 1 0
+0 0 0 0	1 0 0 0
+0 0 1 0	1 0 0 1
+0 0 0 0	0 0 1 0
+
+

@@ -1,0 +1,18 @@
+8
+-15 0 Monumen_Tugu
+-11 -7 Keraton_Yogyakarta
+-7 -2 UGM
+-1 -9 GembiraLoka_Zoo
+-5 6 Monumen_YogyaKembali
+6 -2 Bandara_AdiSucipto
+4 7 Candi_Prambanan
+12 3 TebingBreksi
+0 1 1 0	1 0 0 0
+1 0 0 1	0 0 0 0
+1 0 0 1	0 1 0 0
+0 1 1 0	0 1 0 0
+1 0 0 0	0 1 1 0
+0 0 1 1	1 0 0 1
+0 0 0 0	1 0 0 1
+0 0 0 0	0 1 1 0
+
