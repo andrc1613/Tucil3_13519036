@@ -75,7 +75,7 @@ if __name__ == "__main__":
             txtMap.visualizeGraph()
             
             # node input handler
-            print("Silakan masukkan kota asal dan tujuan (Format: <kota_asal><spasi><kota_tujuan>, contoh: ITB Sabuga) :")
+            print("Silakan masukkan lokasi asal dan tujuan (Format: <lokasi_asal><spasi><lokasi_tujuan>, contoh: ITB Sabuga) :")
             start, end = input().split()
             txtMap.aStar(start,end)
             txtMap.visualizePath()
