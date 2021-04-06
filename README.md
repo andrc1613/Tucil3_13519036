@@ -19,22 +19,23 @@ Program ini dibuat dalam rangka memenuhi tugas kecil ke-3 mata kuliah IF2211 - S
 ## Setup
 Sebelum menggunakan program, Anda harus menginstal library yang disediakan Python yaitu <b>pyvis</b> dan <b>matplotlib</b> untuk mempermudah dalam proses visualisasi graf.
 Untuk menginstal kedua library tersebut, ikuti langkah-langkah di bawah ini:
-1. Buka Command Prompt di Windows lalu jalankan perintah berikut:<br>
+1. Buka Command Prompt di Windows lalu instal library <b>matplotlib</b> dengan menjalankan perintah berikut:<br>
 ```python -m pip install -U pip```<br>
 ```python -m pip install -U matplotlib```
 <br><br>
 2. Instal library <b>pyvis</b> dengan menjalankan perintah berikut di CMD:<br>
 ```$ pip install pyvis```
 <br><br>
-Setelah kedua library tersebut berhasil diinstal, Anda dapat menggunakan program dengan mengikuti langkah-langkah berikut:
-3. Buka Command Prompt di Windows.
-4. Pindahkan direktori ke dalam folder repo tempat program disimpan (folder repo berisi folder bin, doc, src, test, dan file README)
-5. Jalankan perintah ```py src/main.py```
-6. Masukkan file input graf yang dikehendaki. Tuliskan nama file input sesuai yang ada dalam folder test, contoh: ```input1.txt```
-7. Jika nama file input benar, akan muncul jendela baru yang menampilkan visualisasi grafnya. Untuk memasukkan input berikutnya, tutup jendela visualisasi graf terlebih dahulu.
-8. Masukkan lokasi awal dan lokasi akhir yang mau dicari lintasan terpendek beserta jaraknya. Format input dapat dilihat pada program.
+
+Setelah kedua library tersebut berhasil diinstal, Anda dapat menggunakan program dengan mengikuti langkah-langkah berikut:<br>
+3. Buka Command Prompt di Windows.<br>
+4. Pindahkan direktori ke dalam folder repo tempat program disimpan (folder repo berisi folder bin, doc, src, test, dan file README)<br>
+5. Jalankan perintah ```py src/main.py```<br>
+6. Masukkan file input graf yang dikehendaki. Tuliskan nama file input sesuai yang ada dalam folder test, contoh: ```input1.txt```<br>
+7. Jika nama file input benar, akan muncul jendela baru yang menampilkan visualisasi grafnya. Untuk memasukkan input berikutnya, tutup jendela visualisasi graf terlebih dahulu.<br>
+8. Masukkan lokasi awal dan lokasi akhir yang mau dicari lintasan terpendek beserta jaraknya. Format input dapat dilihat pada program.<br>
 9. Jika terdapat jalur yang menghubungkan antarlokasi, program akan menampilkan lintasan terpendek beserta jaraknya.<br>
-Jika tidak ada jalur, program akan mengeluarkan pesan "Tidak terdapat jalan yang menghubungkan kedua lokasi."
+Jika tidak ada jalur, program akan mengeluarkan pesan "Tidak terdapat jalan yang menghubungkan kedua lokasi."<br>
 10. Ketik '#' atau tutup Command Prompt bila sudah selesai menggunakan program.
 
 ## About Us
