@@ -23,12 +23,13 @@ Untuk menginstal matplotlib, ikuti langkah-langkah di bawah ini:
 ```python -m pip install -U matplotlib```<br>
 Setelah matplotlib berhasil di-install, Anda dapat menggunakan program dengan mengikuti langkah-langkah berikut:
 1. Buka Command Prompt di Windows.
-2. Pindahkan direktori ke dalam folder repo tempat program disimpan (folder repo berisi folder doc, src, test, dan file README)
-3. Jalankan perintah ```py src/main.py```
-4. Masukkan file input graf yang dikehendaki. Tuliskan nama file input sesuai yang ada dalam folder test, contoh: ```input1.txt```
-5. Jika nama file input benar, akan muncul jendela baru yang menampilkan visualisasi grafnya. Untuk memasukkan input berikutnya, tutup jendela visualisasi graf terlebih dahulu.
-6. Masukkan lokasi awal dan lokasi akhir yang mau dicari lintasan terpendek beserta jaraknya. Format input dapat dilihat pada program.
-7. Jika terdapat jalur yang menghubungkan antarlokasi, program akan menampilkan lintasan terpendek beserta jaraknya.
+2. Clone repository ini ke direktori yang dikehendaki.
+3. Pindahkan direktori ke dalam folder repo tempat program disimpan (folder repo berisi folder doc, src, test, dan file README)
+4. Jalankan perintah ```py src/main.py```
+5. Masukkan file input graf yang dikehendaki. Tuliskan nama file input sesuai yang ada dalam folder test, contoh: ```input1.txt```
+6. Jika nama file input benar, akan muncul jendela baru yang menampilkan visualisasi grafnya. Untuk memasukkan input berikutnya, tutup jendela visualisasi graf terlebih dahulu.
+7. Masukkan lokasi awal dan lokasi akhir yang mau dicari lintasan terpendek beserta jaraknya. Format input dapat dilihat pada program.
+8. Jika terdapat jalur yang menghubungkan antarlokasi, program akan menampilkan lintasan terpendek beserta jaraknya.
 Jika tidak ada jalur, program akan mengeluarkan pesan "Tidak terdapat jalan yang menghubungkan kedua lokasi."
 8. Ketik '#' atau tutup Command Prompt bila sudah selesai menggunakan program.
 
