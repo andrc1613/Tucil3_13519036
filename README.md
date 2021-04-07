@@ -35,19 +35,19 @@ Jika tidak ada jalur, program akan mengeluarkan pesan "Tidak terdapat jalan yang
 ## Misc
 Jika anda ingin menggunakan file txt sendiri, berikut format file txt yang harus dibuat:<br>
 ```
-<jumlah simpul><br>
-<nama setiap simpul dengan format <x> <y> <nama simpul>> <br>
-<matriks adjacency yang merepresentasikan keterhubungan antarsimpul> <br>
+<jumlah simpul>
+<nama setiap simpul dengan format: x y nama simpul>
+<matriks adjacency yang merepresentasikan keterhubungan antarsimpul>
 ```
 Contoh:
 ```
-3<br>
-0 0 Koor1<br>
-0 1 Koor2<br>
-1 0 Koor3<br>
-0 1 0<br>
-1 0 1<br>
-0 1 0<br>
+3
+0 0 Koor1
+0 1 Koor2
+1 0 Koor3
+0 1 0
+1 0 1
+0 1 0
 ```
 ## About Us
 * Andrew (13519036)
