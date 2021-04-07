@@ -17,8 +17,9 @@ class Graph:
         return None
 
     def showGraph(self):
+        print("Berikut list lokasi yang terdapat dalam peta:")
         for e in self.nodes:
-            e.showNode()
+            e.showNodeName()
         return
 
     def visualizeGraph(self):
@@ -42,13 +43,14 @@ class Graph:
             node1 = self.getNodeByName(listEdges[i][0])
             node2 = self.getNodeByName(listEdges[i][1])
             plt.plot([node1.x,node2.x],[node1.y,node2.y],color='b')
+            plt.text((node1.x+node2.x)/2, (node1.y+node2.y)/2, str(round(self.euclideanDistance(node1,node2),2)))
         
         plt.show()
         return
     
     def visualizePath(self):
         if self.aStarPath == None:
-            print("Tidak terdapat jalan yang menghubungkan kedua lokasi.")
+            print("Tidak terdapat jalan yang menghubungkan kedua lokasi.\n")
             return
         plt.axis([-10,10,-10,10])
         listName = []
@@ -77,10 +79,13 @@ class Graph:
             node2 = self.getNodeByName(listEdges[i][1])
             if node1.name in listNameInPath and node2.name in listNameInPath:
                 plt.plot([node1.x,node2.x],[node1.y,node2.y],color='r')
+                plt.text((node1.x+node2.x)/2, (node1.y+node2.y)/2, str(round(self.euclideanDistance(node1,node2),2)))
                 continue
             plt.plot([node1.x,node2.x],[node1.y,node2.y],color='b')
+            plt.text((node1.x+node2.x)/2, (node1.y+node2.y)/2, str(round(self.euclideanDistance(node1,node2),2)))
 
         plt.show()
+        print("Jarak dari {0} menuju {1} adalah {2}\n".format(self.aStarPath[0].name,self.aStarPath[-1].name,str(round(self.aStarPath[-1].g,2))))
         return
 
     def euclideanDistance(self, node1, node2):
@@ -154,6 +159,5 @@ class Node:
         self.g = 0
         self.h = 0
 
-    def showNode(self):
-        print("{0} ({1},{2}) {3}".format(
-            self.name, self.x, self.y, self.adjacentNodes))
+    def showNodeName(self):
+        print(self.name)

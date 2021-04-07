@@ -1,4 +1,3 @@
-from pyvis.network import Network
 from classes import Graph, Node
 
 
@@ -41,28 +40,6 @@ def createGraphFromFile(filename):
 
     return tempGraph
 
-
-# Graph Visualization
-def visualizeGraph(graph):
-    net = Network(height = 1000,width = 1000)
-    listName = []
-    listX = []
-    listY = []
-    listsize = [10 for i in range (graph.nodesCount)]
-    listEdges = []
-    for node in graph.nodes:
-        listName.append(node.name)
-        listX.append(node.x)
-        listY.append(node.y)
-        for adjNodes in node.adjacentNodes:
-            listEdges.append((node.name,adjNodes))
-    net.add_nodes(listName,size = listsize, x = listX, y = listY)
-    net.add_edges(listEdges)
-    net.show('test.html')
-    net.show_buttons()
-    return
-
-
 # Main Function
 if __name__ == "__main__":
     print("Input \"#\" untuk keluar.")
@@ -73,10 +50,21 @@ if __name__ == "__main__":
         try:
             txtMap = createGraphFromFile(filename)
             txtMap.visualizeGraph()
+            txtMap.showGraph()
+            print("\n")
             
             # node input handler
-            print("Silakan masukkan lokasi asal dan tujuan (Format: <lokasi_asal><spasi><lokasi_tujuan>, contoh: ITB Sabuga) :")
+            print("Silakan masukkan lokasi asal dan tujuan (Format: <lokasi_asal><spasi><lokasi_tujuan>, contoh: ITB Sabuga) : ")
             start, end = input().split()
+            
+            # validate node input
+            while not txtMap.getNodeByName(start) or not txtMap.getNodeByName(end):
+                if not txtMap.getNodeByName(start):
+                    print("Tidak ada lokasi dengan nama {0}".format(start))
+                if not txtMap.getNodeByName(end):
+                    print("Tidak ada lokasi dengan nama {0}".format(end))
+                start, end = input("Silakan masukkan lokasi asal dan tujuan (Format: <lokasi_asal><spasi><lokasi_tujuan>, contoh: ITB Sabuga) : ").split()
+
             txtMap.aStar(start,end)
             txtMap.visualizePath()
             filename = input("Enter file name: ")
