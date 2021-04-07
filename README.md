@@ -7,36 +7,50 @@ Langkah pertama di dalam program ini adalah membuat graf yang merepresentasikan 
 * [Technologies](#technologies)
 * [Setup](#setup)
 * [About Us](#about-us)
-
+* [Misc](#misc)
 ## General Info
 Program ini dibuat dalam rangka memenuhi tugas kecil ke-3 mata kuliah IF2211 - Strategi Algoritme di Prodi Sarjana Teknik Informatika Institut Teknologi Bandung.
 
 ## Technologies
 * Python 3.9.0
-* pyvis 0.1.3.1
 * matplotlib 3.4.1
 
 ## Setup
-Sebelum menggunakan program, Anda harus menginstal library yang disediakan Python yaitu <b>pyvis</b> dan <b>matplotlib</b> untuk mempermudah dalam proses visualisasi graf.
-Untuk menginstal kedua library tersebut, ikuti langkah-langkah di bawah ini:
+Sebelum menggunakan program, Anda harus menginstal library yang disediakan Python yaitu <b>matplotlib</b> untuk mempermudah dalam proses visualisasi graf.
+Untuk menginstal matplotlib, ikuti langkah-langkah di bawah ini:
 1. Buka Command Prompt di Windows lalu instal library <b>matplotlib</b> dengan menjalankan perintah berikut:<br>
 ```python -m pip install -U pip```<br>
-```python -m pip install -U matplotlib```
-
-2. Instal library <b>pyvis</b> dengan menjalankan perintah berikut di CMD:<br>
-```$ pip install pyvis```
-
-Setelah kedua library tersebut berhasil diinstal, Anda dapat menggunakan program dengan mengikuti langkah-langkah berikut:
+```python -m pip install -U matplotlib```<br>
+Setelah matplotlib berhasil di-install, Anda dapat menggunakan program dengan mengikuti langkah-langkah berikut:
 1. Buka Command Prompt di Windows.
-2. Pindahkan direktori ke dalam folder repo tempat program disimpan (folder repo berisi folder bin, doc, src, test, dan file README)
-3. Jalankan perintah ```py src/main.py```
-4. Masukkan file input graf yang dikehendaki. Tuliskan nama file input sesuai yang ada dalam folder test, contoh: ```input1.txt```
-5. Jika nama file input benar, akan muncul jendela baru yang menampilkan visualisasi grafnya. Untuk memasukkan input berikutnya, tutup jendela visualisasi graf terlebih dahulu.
-6. Masukkan lokasi awal dan lokasi akhir yang mau dicari lintasan terpendek beserta jaraknya. Format input dapat dilihat pada program.
-7. Jika terdapat jalur yang menghubungkan antarlokasi, program akan menampilkan lintasan terpendek beserta jaraknya.
+2. Clone repository ini ke direktori yang dikehendaki.
+3. Pindahkan direktori ke dalam folder repo tempat program disimpan (folder repo berisi folder doc, src, test, dan file README)
+4. Jalankan perintah ```py src/main.py```
+5. Masukkan file input graf yang dikehendaki. Tuliskan nama file input sesuai yang ada dalam folder test, contoh: ```input1.txt```
+6. Jika nama file input benar, akan muncul jendela baru yang menampilkan visualisasi grafnya. Untuk memasukkan input berikutnya, tutup jendela visualisasi graf terlebih dahulu.
+7. Masukkan lokasi awal dan lokasi akhir yang mau dicari lintasan terpendek beserta jaraknya. Format input dapat dilihat pada program.
+8. Jika terdapat jalur yang menghubungkan antarlokasi, program akan menampilkan lintasan terpendek beserta jaraknya.
 Jika tidak ada jalur, program akan mengeluarkan pesan "Tidak terdapat jalan yang menghubungkan kedua lokasi."
 8. Ketik '#' atau tutup Command Prompt bila sudah selesai menggunakan program.
 
+## Misc
+1. Perhitungan bobot antara dua simpul dilakukan dengan menghitung jarak euclidean kedua simpul. Hal ini berarti terdapat asumsi bahwa setiap jalan pada peta adalah berupa garis lurus.
+2. Jika anda ingin menggunakan file txt sendiri, berikut format file txt yang harus dibuat:<br>
+```
+<jumlah simpul>
+<nama setiap simpul dengan format: x y nama simpul>
+<matriks adjacency yang merepresentasikan keterhubungan antarsimpul>
+```
+Contoh:
+```
+3
+0 0 Koor1
+0 1 Koor2
+1 0 Koor3
+0 1 0
+1 0 1
+0 1 0
+```
 ## About Us
 * Andrew (13519036)
 * Leonardus Brandon Luwianto (13519102)
