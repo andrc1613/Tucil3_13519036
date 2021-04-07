@@ -7,7 +7,7 @@ Langkah pertama di dalam program ini adalah membuat graf yang merepresentasikan 
 * [Technologies](#technologies)
 * [Setup](#setup)
 * [About Us](#about-us)
-
+* [Misc](#misc)
 ## General Info
 Program ini dibuat dalam rangka memenuhi tugas kecil ke-3 mata kuliah IF2211 - Strategi Algoritme di Prodi Sarjana Teknik Informatika Institut Teknologi Bandung.
 
@@ -34,7 +34,8 @@ Jika tidak ada jalur, program akan mengeluarkan pesan "Tidak terdapat jalan yang
 8. Ketik '#' atau tutup Command Prompt bila sudah selesai menggunakan program.
 
 ## Misc
-Jika anda ingin menggunakan file txt sendiri, berikut format file txt yang harus dibuat:<br>
+1. Perhitungan bobot antara dua simpul dilakukan dengan menghitung jarak euclidean kedua simpul. Hal ini berarti terdapat asumsi bahwa setiap jalan pada peta adalah berupa garis lurus.
+2. Jika anda ingin menggunakan file txt sendiri, berikut format file txt yang harus dibuat:<br>
 ```
 <jumlah simpul>
 <nama setiap simpul dengan format: x y nama simpul>
