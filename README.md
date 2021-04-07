@@ -20,7 +20,7 @@ Sebelum menggunakan program, Anda harus menginstal library yang disediakan Pytho
 Untuk menginstal matplotlib, ikuti langkah-langkah di bawah ini:
 1. Buka Command Prompt di Windows lalu instal library <b>matplotlib</b> dengan menjalankan perintah berikut:<br>
 ```python -m pip install -U pip```<br>
-```python -m pip install -U matplotlib```
+```python -m pip install -U matplotlib```<br>
 Setelah matplotlib berhasil di-install, Anda dapat menggunakan program dengan mengikuti langkah-langkah berikut:
 1. Buka Command Prompt di Windows.
 2. Pindahkan direktori ke dalam folder repo tempat program disimpan (folder repo berisi folder doc, src, test, dan file README)
